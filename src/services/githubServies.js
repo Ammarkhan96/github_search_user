@@ -2,9 +2,9 @@ import axios from "axios";
 
 
 const BASE_URL = "https://api.github.com"
-const TOKEN = "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"
 
-axios.defaults.headers.common['Authorization'] = `Bearer ${TOKEN}`
+
+axios.defaults.headers.common['Authorization'] = `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
 
 const searchUsers = (queries) => {
     return axios.get(`${BASE_URL}/search/users`, {
