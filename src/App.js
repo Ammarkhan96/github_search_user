@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import store from "./redux/store"
+import Input from "./components/Input/Input"
+import { Provider } from 'react-redux';
+import List from "./components/List/List"
+import Modal from './components/Modal/Modal';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Provider store={store}>
+      <div className='App'>
+        <h1>Github User Search</h1>
+        <Input />
+        <List />
+        <Modal />
+      </div>
+   </Provider>
   );
 }
 

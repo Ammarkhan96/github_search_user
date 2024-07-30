@@ -1,0 +1,19 @@
+.container {
+    margin: 20px;
+    text-align: center;
+}
+
+.container input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.container input:focus {
+    border-color: #0055ff;
+    box-shadow: 0 0 5px rgba(0, 85, 255, 0.2);
+}
