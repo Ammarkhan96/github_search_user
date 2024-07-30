@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const BASE_URL = "https://api.github.com"
-const GITHUB_TOKEN = "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"
+const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN || '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';
 
 axios.defaults.headers.common['Authorization'] = `Bearer ${GITHUB_TOKEN}`
 
